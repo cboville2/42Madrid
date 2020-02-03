@@ -1,0 +1,6 @@
+Credentials cache: API:5088
+        Principal: cboville@42MADRID.COM
+
+  Issued                Expires               Principal
+Feb  3 16:23:50 2020  Feb  4 02:23:50 2020  krbtgt/42MADRID.COM@42MADRID.COM
+Feb  3 16:23:51 2020  Feb  4 02:23:50 2020  HTTP/student-storage.42madrid.com@42MADRID.COM
