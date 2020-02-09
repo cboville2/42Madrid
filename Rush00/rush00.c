@@ -6,7 +6,7 @@
 /*   By: cboville <cboville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/08 11:12:28 by cboville          #+#    #+#             */
-/*   Updated: 2020/02/09 19:27:19 by cboville         ###   ########.fr       */
+/*   Updated: 2020/02/09 19:48:52 by cboville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,19 @@
 
 void	ft_putchar(char c);
 
+void 	sos(int x, int y) 
+{
+	write(1, "INPUT ERROR: PLEASE INSERT POSITIVE VALUES \n", 50);
+	return;
+}
+
 void	rush(int x, int y)
 {
 	int l;
 	int g;
-
+	
 	if (x <= 0 || y <= 0)
-		write(1, "INPUT ERROR: PLEASE INSERT POSITIVE VALUES \n", 50);
+		void sos();
 	l = 1;
 	while (l <= y)
 	{
@@ -42,3 +48,5 @@ void	rush(int x, int y)
 		l++;
 	}
 }
+
+

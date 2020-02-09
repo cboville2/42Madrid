@@ -6,7 +6,7 @@
 /*   By: cboville <cboville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/08 11:12:28 by cboville          #+#    #+#             */
-/*   Updated: 2020/02/09 19:27:08 by cboville         ###   ########.fr       */
+/*   Updated: 2020/02/09 20:01:45 by cboville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,9 @@ void	rush(int x, int y)
 {
 	int l;
 	int g;
-	
-	if (g <= 0 || l <= 0)
-		{
-		write(1, "INPUT ERROR: PLEASE INSERT POSITIVE VALUES  \n", 50); 
-		return;
-		}
+
 	l = 1;
-	while (l <= y)
+	while (l <= y && !(x <= 0 || y <= 0))
 	{
 		g = 1;
 		while (g <= x)
@@ -43,4 +38,6 @@ void	rush(int x, int y)
 		ft_putchar('\n');
 		l++;
 	}
+	if (x <= 0 || y <= 0)
+		write(1, "INPUT ERROR: PLEASE INSERT POSITIVE VALUES  \n", 50);
 }
