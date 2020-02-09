@@ -6,7 +6,7 @@
 /*   By: cboville <cboville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/08 10:35:14 by cboville          #+#    #+#             */
-/*   Updated: 2020/02/09 14:50:13 by cboville         ###   ########.fr       */
+/*   Updated: 2020/02/09 17:08:32 by cboville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ void	rush(int x, int y);
 
 int		main(void)
 {
-	rush(5, -1);
+	rush(1, 5);
 	return (0);
 }
