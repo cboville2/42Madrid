@@ -1,30 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cboville <cboville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/07 12:44:18 by cboville          #+#    #+#             */
-/*   Updated: 2020/02/10 00:08:33 by cboville         ###   ########.fr       */
+/*   Created: 2020/02/10 10:34:14 by cboville          #+#    #+#             */
+/*   Updated: 2020/02/10 15:32:07 by cboville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_numbers(void)
+void	ft_putchar(char c)
 {
-	char n;
+	write(1, &c, 1);
+}
 
-	n = '0';
-	while (n <= '9')
+void	ft_print_comb2(void)
+{
+	int a;
+	int b;
+
+	a = 0;
+	while (a <= 98)
 	{
-		write(1, &n, 1);
-		n++;
+		b = a + 1;
+		while (b <= 99)
+		{
+			ft_putchar((a / 10) + 48);
+			ft_putchar((a % 10) + 48);
+			ft_putchar(' ');
+			ft_putchar((b / 10) + 48);
+			ft_putchar((b % 10) + 48);
+			if (a != 98 || b != 99)
+			{
+				ft_putchar(',');
+				ft_putchar(' ');
+			}
+			b++;
+		}
+		a++;
 	}
 }
 
 int		main(void)
 {
-	ft_print_numbers();
+	ft_print_comb2();
 }

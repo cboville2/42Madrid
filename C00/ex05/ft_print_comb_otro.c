@@ -1,30 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_print_comb_otro.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cboville <cboville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/07 12:44:18 by cboville          #+#    #+#             */
-/*   Updated: 2020/02/10 00:08:33 by cboville         ###   ########.fr       */
+/*   Created: 2020/02/07 13:57:04 by cboville          #+#    #+#             */
+/*   Updated: 2020/02/10 18:40:30 by cboville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_numbers(void)
+void	ft_putchar(char a, char b, char c)
 {
-	char n;
+	write(1, &a, 1);
+	write(1, &b, 1);
+	write(1, &c, 1);
+}
 
-	n = '0';
-	while (n <= '9')
+void	ft_print_comb(void)
+{
+	char a;
+	char b;
+	char c;
+
+	a = 48;
+	while (a < 57)
 	{
-		write(1, &n, 1);
-		n++;
+		b = 48;
+		while (b < 57)
+		{
+			c = 48;
+			while (c <= 57)
+			{
+				if (a < b && b < c)
+				{
+					ft_putchar(a, b, c);
+					if (a != 55)
+						write(1, ", ", 2);
+				}
+				c++;
+			}
+			b++;
+		}
+		a++;
 	}
 }
 
 int		main(void)
 {
-	ft_print_numbers();
+	ft_print_comb();
 }

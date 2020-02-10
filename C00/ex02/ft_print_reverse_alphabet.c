@@ -6,7 +6,7 @@
 /*   By: cboville <cboville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/07 11:34:35 by cboville          #+#    #+#             */
-/*   Updated: 2020/02/07 12:57:20 by cboville         ###   ########.fr       */
+/*   Updated: 2020/02/10 00:07:41 by cboville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,9 @@ void	ft_print_reverse_alphabet(void)
 		write(1, &l, 1);
 		l--;
 	}
+}
+
+int		main(void)
+{
+	ft_print_reverse_alphabet();
 }
