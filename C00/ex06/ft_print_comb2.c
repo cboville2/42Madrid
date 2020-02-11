@@ -6,7 +6,7 @@
 /*   By: cboville <cboville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 10:34:14 by cboville          #+#    #+#             */
-/*   Updated: 2020/02/10 15:32:07 by cboville         ###   ########.fr       */
+/*   Updated: 2020/02/11 11:47:29 by cboville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,4 @@ void	ft_print_comb2(void)
 		}
 		a++;
 	}
-}
-
-int		main(void)
-{
-	ft_print_comb2();
 }

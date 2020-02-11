@@ -6,7 +6,7 @@
 /*   By: cboville <cboville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/07 12:28:32 by cboville          #+#    #+#             */
-/*   Updated: 2020/02/10 00:00:43 by cboville         ###   ########.fr       */
+/*   Updated: 2020/02/11 11:32:39 by cboville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,4 @@ void	ft_print_alphabet(void)
 		write(1, &l, 1);
 		l++;
 	}
-}
-
-int		main(void)
-{
-	ft_print_alphabet();
 }

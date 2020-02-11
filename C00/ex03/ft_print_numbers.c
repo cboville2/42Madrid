@@ -6,7 +6,7 @@
 /*   By: cboville <cboville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/07 12:44:18 by cboville          #+#    #+#             */
-/*   Updated: 2020/02/10 00:08:33 by cboville         ###   ########.fr       */
+/*   Updated: 2020/02/11 11:39:44 by cboville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,4 @@ void	ft_print_numbers(void)
 		write(1, &n, 1);
 		n++;
 	}
-}
-
-int		main(void)
-{
-	ft_print_numbers();
 }
