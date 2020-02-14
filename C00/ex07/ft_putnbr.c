@@ -6,7 +6,7 @@
 /*   By: cboville <cboville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 19:00:03 by cboville          #+#    #+#             */
-/*   Updated: 2020/02/11 12:55:36 by cboville         ###   ########.fr       */
+/*   Updated: 2020/02/11 14:53:26 by cboville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putchar(int c)
 
 void	ft_putnbr(int nb)
 {
-	int nbr;
+	unsigned int nbr;
 
 	if (nb < 0)
 	{
