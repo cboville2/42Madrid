@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*   main09.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cboville <cboville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/14 23:20:41 by cboville          #+#    #+#             */
-/*   Updated: 2020/02/15 11:28:29 by cboville         ###   ########.fr       */
+/*   Created: 2020/02/15 00:42:25 by cboville          #+#    #+#             */
+/*   Updated: 2020/02/15 11:59:17 by cboville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	*ft_strlowcase(char *str)
-{
-	int i;
+#include <stdio.h>
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 65 && str[i] <= 90)
-			str[i] = str[i] + 32;
-		i++;
-	}
-	return (str);
+int	*ft_strcapitalize(char *str);
+
+int	main(void)
+{
+	char str[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
+
+	ft_strcapitalize(str);
+	printf("%s", ft_strcapitalize(str));
 }

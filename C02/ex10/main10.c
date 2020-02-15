@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*   main10.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cboville <cboville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/14 23:20:41 by cboville          #+#    #+#             */
-/*   Updated: 2020/02/15 11:28:29 by cboville         ###   ########.fr       */
+/*   Created: 2020/02/14 13:46:19 by cboville          #+#    #+#             */
+/*   Updated: 2020/02/15 12:51:13 by cboville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	*ft_strlowcase(char *str)
-{
-	int i;
+#include <stdio.h>
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 65 && str[i] <= 90)
-			str[i] = str[i] + 32;
-		i++;
-	}
-	return (str);
+char	*ft_strlcpy(char *dest, char *src, unsigned int size);
+
+int	main()
+{
+	char dest[] = "ABCDE";
+	char src[] = "123";
+	unsigned int size = 3;
+
+	printf("%s", ft_strlcpy(dest, src, size));
 }
