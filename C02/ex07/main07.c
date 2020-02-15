@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   main07.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cboville <cboville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/14 13:49:07 by cboville          #+#    #+#             */
-/*   Updated: 2020/02/14 23:46:18 by cboville         ###   ########.fr       */
+/*   Created: 2020/02/15 00:42:25 by cboville          #+#    #+#             */
+/*   Updated: 2020/02/15 01:48:26 by cboville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
-{
-	unsigned int i;
+#include <stdio.h>
 
-	i = 0;
-	while (src[i] != '\0' && i < n)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+int	*ft_strupcase(char *str);
+
+int	main(void)
+{
+	char str[] = "aBc";
+
+	ft_strupcase(str);
+	printf("%s", ft_strupcase(str));
 }
