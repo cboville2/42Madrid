@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main04.c                                           :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cboville <cboville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/15 00:42:25 by cboville          #+#    #+#             */
-/*   Updated: 2020/02/17 11:08:13 by cboville         ###   ########.fr       */
+/*   Created: 2020/02/14 13:49:07 by cboville          #+#    #+#             */
+/*   Updated: 2020/02/17 19:32:05 by cboville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int	ft_str_is_lowercase(char *str);
-
-int	main(void)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	char str[] = "abc";
+	unsigned int i;
+	unsigned int count;
 
-	ft_str_is_lowercase(str);
-	printf("%d", ft_str_is_lowercase(str));
+	count = 0;
+	while (src[count] != '\0')
+		count++;
+	i = 0;
+	if (size != 0)
+	{
+		while (src[i] != '\0' && i < (size - 1))
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\n';
+	}
+	return (count);
 }

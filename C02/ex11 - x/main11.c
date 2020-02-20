@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main04.c                                           :+:      :+:    :+:   */
+/*   main11.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cboville <cboville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/15 00:42:25 by cboville          #+#    #+#             */
-/*   Updated: 2020/02/17 11:08:13 by cboville         ###   ########.fr       */
+/*   Updated: 2020/02/17 13:32:53 by cboville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_str_is_lowercase(char *str);
+char	ft_putstr_non_printable(char *str);
 
 int	main(void)
 {
-	char str[] = "abc";
+	char str[] = "Coucou\ntu vas bien ?";
 
-	ft_str_is_lowercase(str);
-	printf("%d", ft_str_is_lowercase(str));
+	ft_putstr_non_printable(str);
+	printf("%c", ft_putstr_non_printable(str));
 }

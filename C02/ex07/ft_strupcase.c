@@ -6,11 +6,11 @@
 /*   By: cboville <cboville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/14 23:20:41 by cboville          #+#    #+#             */
-/*   Updated: 2020/02/15 01:45:56 by cboville         ###   ########.fr       */
+/*   Updated: 2020/02/17 11:43:41 by cboville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	*ft_strupcase(char *str)
+char	*ft_strupcase(char *str)
 {
 	int i;
 

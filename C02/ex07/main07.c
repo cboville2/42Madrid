@@ -6,13 +6,13 @@
 /*   By: cboville <cboville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/15 00:42:25 by cboville          #+#    #+#             */
-/*   Updated: 2020/02/15 01:48:26 by cboville         ###   ########.fr       */
+/*   Updated: 2020/02/17 11:43:34 by cboville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	*ft_strupcase(char *str);
+char	*ft_strupcase(char *str);
 
 int	main(void)
 {
