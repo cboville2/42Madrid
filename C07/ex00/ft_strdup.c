@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cboville <cboville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/20 04:36:57 by cboville          #+#    #+#             */
-/*   Updated: 2020/02/24 02:27:00 by cboville         ###   ########.fr       */
+/*   Created: 2020/02/24 00:52:45 by cboville          #+#    #+#             */
+/*   Updated: 2020/02/24 03:45:03 by cboville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
-int	main(int argc, char *argv[])
+char	*ft_strdup(char *src)
 {
-	int i;
+	int		i;
+	char	*dest;
 
-	(void)argc;
-	while (argv[0][i] != '\0')
+	i = 0;
+	while (src[i] != '\0')
 	{
-		write(1, &argv[0][i], 1);
 		i++;
 	}
-	write(1, "\n", 1);
+	dest = malloc(i + 1);
+	if (dest == NULL)
+		return (NULL);
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }

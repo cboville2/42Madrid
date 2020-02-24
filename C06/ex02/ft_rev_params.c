@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cboville <cboville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/20 04:36:57 by cboville          #+#    #+#             */
-/*   Updated: 2020/02/24 02:27:00 by cboville         ###   ########.fr       */
+/*   Created: 2020/02/20 05:11:44 by cboville          #+#    #+#             */
+/*   Updated: 2020/02/21 13:36:34 by cboville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,18 @@
 int	main(int argc, char *argv[])
 {
 	int i;
+	int j;
 
-	(void)argc;
-	while (argv[0][i] != '\0')
+	i = argc - 1;
+	while (i > 0)
 	{
-		write(1, &argv[0][i], 1);
-		i++;
+		j = 0;
+		while (argv[i][j] != '\0')
+		{
+			write(1, &argv[i][j], 1);
+			j++;
+		}
+		i--;
+		write(1, "\n", 1);
 	}
-	write(1, "\n", 1);
 }

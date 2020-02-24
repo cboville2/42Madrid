@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cboville <cboville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/20 04:36:57 by cboville          #+#    #+#             */
-/*   Updated: 2020/02/24 02:27:00 by cboville         ###   ########.fr       */
+/*   Created: 2020/02/24 02:17:51 by cboville          #+#    #+#             */
+/*   Updated: 2020/02/24 04:45:32 by cboville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-int	main(int argc, char *argv[])
+int	*ft_range(int min, int max)
 {
+	int *str;
 	int i;
+	int n;
 
-	(void)argc;
-	while (argv[0][i] != '\0')
+	i = 0;
+	n = min;
+	str = malloc((max - min) * 4);
+	if (str == NULL)
+		return (NULL);
+	if (min >= max)
+		return (NULL);
+	while (i < max)
 	{
-		write(1, &argv[0][i], 1);
+		str[0] = n;
 		i++;
+		n++;
+		printf("%d", *str);
 	}
-	write(1, "\n", 1);
+	return (str);
 }
