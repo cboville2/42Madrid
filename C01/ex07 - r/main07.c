@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main00.c                                           :+:      :+:    :+:   */
+/*   main07.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cboville <cboville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/11 18:15:38 by cboville          #+#    #+#             */
-/*   Updated: 2020/02/17 21:43:49 by cboville         ###   ########.fr       */
+/*   Created: 2020/02/12 21:15:08 by cboville          #+#    #+#             */
+/*   Updated: 2020/02/21 14:49:52 by cboville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
 
-void 	ft_ft(int *nbr);
+void	ft_rev_int_tab(int *tab, int size);
 
-int main(void)
+int		main(void)
 {
-	int a;
-	int *nbr;
-	
-	*nbr = 36;
+	int i;
 
-	ft_ft(nbr);
-	printf("%d", *nbr);
+	int tab[5] = {1, 2, 3, 4};
+	int size = 4;
+	ft_rev_int_tab(tab, size);
+
+	write(1, &tab[5], 5);
 }
