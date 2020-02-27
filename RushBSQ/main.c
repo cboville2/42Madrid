@@ -3,36 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cboville <cboville@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sgalindo <sgalindo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 13:38:18 by sgalindo          #+#    #+#             */
-/*   Updated: 2020/02/24 20:46:27 by cboville         ###   ########.fr       */
+/*   Updated: 2020/02/26 21:18:57 by sgalindo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "F_header.h"
+#include "L_header.h"
 
-
-#include<fcntl.h>
-#include<stdio.h>
-#include<unistd.h>
-#include<stdlib.h>
-
-char *read_map(char *example_file);
-int	ft_strlen_mod(char *buff);
+int		ft_strlen(char *buff);
 
 int main (int argc,char **argv)
 {
 	(void)argv;
 	(void)argc;
 	char *buff;
+	int i;
 
-	buff = malloc(1);
+	i = 0;
+
 	buff = read_map("example_file");
+	//buff = (char)malloc((ft_strlen(*buff)) * sizeof(char));
 
-	
-	ft_strlen_mod(buff);
-	
-	//printf("%s",buff);
+	write(1, "Sounds good, doesn't work \nAt least we tried ¯\\_(ツ)_/¯ \nSarica & Ovejica\n", 78);
 
 	return (0);
 }

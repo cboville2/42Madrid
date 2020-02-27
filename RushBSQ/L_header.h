@@ -1,33 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_map.c                                        :+:      :+:    :+:   */
+/*   L_header.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sgalindo <sgalindo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cboville <cboville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/24 12:55:35 by sgalindo          #+#    #+#             */
-/*   Updated: 2020/02/26 21:19:45 by sgalindo         ###   ########.fr       */
+/*   Created: 2020/02/26 00:40:37 by cboville          #+#    #+#             */
+/*   Updated: 2020/02/26 01:08:10 by cboville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "F_header.h"
-#include "L_header.h"
+#ifndef L_HEADER_H
+# define L_HEADER_H
 
-int	ft_strlen_mod(char *buff)
-{
-	int i;
-	
-	i = 0;
-	while (buff[i])
-	{
-		if (i > 4)
-			return(0);
-		i++;
-		if (buff[i] == '\n')
-		
-			return (i + 1);
-	}
-	return (i);
-	
-}
-	
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+#endif

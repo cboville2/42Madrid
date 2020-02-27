@@ -1,9 +1,10 @@
 #Variables
-OBJS = main.o check_map.o read_map.o
+NAME = BSQ
+OBJS = main.o check_map.o read_map.o map_str.o
 CFLAGS = -Wall -Wextra -Werror
 BINARY = BSQ
 
-all: BSQ
+all: $(NAME)
 
 #Makefile General
 BSQ: $(OBJS)
